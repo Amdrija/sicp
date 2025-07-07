@@ -1,0 +1,1 @@
+Doesn't work that well, because exponents get very large and it either overflows or is forced to use BigNumber which is computationally much more expensive.

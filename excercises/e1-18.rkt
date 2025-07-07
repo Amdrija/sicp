@@ -1,0 +1,20 @@
+#lang sicp
+
+(define (mul a b)
+  (define (double x) (+ x x))
+  (define (halve x) (/ x 2))
+  (define (even? x) (= (remainder x 2) 0))
+  (define (mul-iter product a b)
+    (cond ((= a 0) product)
+          ((even? a) (mul-iter product (halve a) (double b)))
+          (else (mul-iter (+ product b) (- a 1) b))))
+  (mul-iter 0 a b))
+
+(mul 2 4)
+(mul 7 9)
+(mul 6 5)
+(mul 3 8)
+(mul 0 5)
+(mul 7 0)
+(mul 1 12)
+(mul 14 1)
