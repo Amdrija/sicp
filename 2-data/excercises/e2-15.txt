@@ -1,0 +1,6 @@
+The error compounds through the operations, because even when two uncertain measurements
+are the same, it could be that both are on the other ends of the intervals. So the operations
+should account for this. 
+
+There is no way of knowing that two measurements are actually the same measurement and
+that the error shouldn't be propagated
