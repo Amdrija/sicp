@@ -1,0 +1,14 @@
+#lang sicp
+
+(define (accumulate op initial sequence)
+  (if (null? sequence)
+      initial
+      (op (car sequence)
+          (accumulate op initial (cdr sequence)))))
+
+(define (horner-eval x coeffiecients)
+  (accumulate (lambda (element result) (+ element (* x result)))
+              0
+              coeffiecients))
+
+(horner-eval 2 (list 1 3 0 5 0 1))
