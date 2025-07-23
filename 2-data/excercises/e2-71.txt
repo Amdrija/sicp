@@ -1,0 +1,14 @@
+weights: (A 1) (B 2) (C 4) (D 8) (E 16)
+Tree:
+           31
+          /  \
+         15   E
+        /  \
+       7    D
+      / \
+     3   C
+    / \
+   A   B
+
+Most frequent symbol - n - 1 bits
+Least frequent symbol - 1 biit

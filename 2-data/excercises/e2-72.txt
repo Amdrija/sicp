@@ -1,0 +1,6 @@
+In the case of a tree from 2.71, we search all symbols of current level
+This means that for level 1 we have to search all symbols - n
+For level 2 - n - 1
+For level 3 only quarter - n - 2
+
+= n + n - 1 + n - 2 + ... + 1 = O (n^2)
