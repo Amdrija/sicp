@@ -1,0 +1,16 @@
+Extending the system
+
+Generic operations with explicit dispatch:
+Adding a new type - needs to change all generic operations to add new clause - lost of changes
+Adding a new operations - needs to implement it for all the types, 1 change
+
+Data-directed style (virtual table)
+Adding a new type - needs to implement the operations just for that type and install them - the generic operations dont change
+Adding a new operation - each type needs to implement this operations on its own and install it
+
+Message-passing
+Adding a new type - needs to implement operations just for that type - 1 change
+Adding a new operations - each type adds the operation to the dispatch function - generic operations not impacted
+
+When adding new operatiosn - generic operations is better, because you change it only at 1 place
+When adding new types - data-directed style / message passing better, because you change it only at 1 place
