@@ -1,0 +1,13 @@
+The package doesn't expose the magnitude for complex numbers
+What is needed is to install a method magnitude for 'complex type
+(put 'real-part '(complex) real-part)
+(put 'imag-part '(complex) imag-part)
+(put 'magnitude '(complex) magnitude)
+(put 'angle '(complex) angle)
+
+Then, you define a procedure
+(define (magnitude z) (apply-generic 'magnitude z))
+Now, it will now that there is a procedure 'magnitude for 'complex type.
+apply-generic is called twice, first to get the magnitude function
+for the 'complex type and then to get the 'magnitude function for
+the 'polar or 'rectangular type.
