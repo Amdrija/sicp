@@ -1,0 +1,20 @@
+#lang sicp
+
+(define (make-rand)
+  (define current-rand 5)
+  (define (rand-update x) (remainder (+ (* x 8121) 28411) 134456))
+  (define (generate)
+    (begin (set! current-rand (rand-update current-rand))
+           current-rand))
+  (define (reset seed) (set! current-rand seed))
+  (define (dispatch op)
+    (cond ((eq? op 'generate) generate)
+          ((eq? op 'reset) reset)
+          (else "Unknown operation " op)))
+  dispatch)
+
+(define rand (make-rand))
+((rand 'generate))
+((rand 'generate))
+((rand 'reset) 5)
+((rand 'generate))
