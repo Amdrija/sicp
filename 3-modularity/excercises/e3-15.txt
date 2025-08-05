@@ -1,0 +1,5 @@
+set-to-wow! on z1 will take the car of z1, which is (a b) and set its car to wow.
+Since cdr of z1 also points to the same pair, its car will also be wow.
+
+set-to-wow! on z2 will just set the car of z2 to wow, but cdr of z2 points to a different
+pair with the same (a b) values, so its car is not set to wow.
