@@ -1,0 +1,8 @@
+In the second example with let, there will be an additional environment created.
+The first environement is from the make-withdraw call.
+The second environement is from the let and it references the make-withdraw call.
+
+Then, after the value is bound, both environemnts are accessible (which means that
+initial amount will also be accessible inside the lambda)
+
+The local states of the 2 objects are stored in different environments (stack frames).

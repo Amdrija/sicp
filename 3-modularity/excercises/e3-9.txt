@@ -1,0 +1,5 @@
+For the recursive procedure, we just create an environment with the current N.
+
+For the iterative procedure, theres first the environment create with N For
+the "normal" factorial call, and then the iter functions each create another
+environment with product, current bound, which references the environment which was called.

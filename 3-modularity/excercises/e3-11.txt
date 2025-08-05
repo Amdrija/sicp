@@ -1,0 +1,6 @@
+First, when we call (make-account) an environemt E1 is created.
+withdraw, deposit and dispatch will all create environemnts whose parent is E1 
+when called.
+Then we call (acc 'deposit), which create an environement E2 -> E1 with m bound to 'deposit.
+This will return the deposit function. After this point, E2 is no longer used and can be destroyed.
+Then deposit function is called which create an environment E3 -> E1 with amount = 40.
