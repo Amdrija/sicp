@@ -1,0 +1,2 @@
+The queue is just a pair of first element in the queue and last. 
+So, when printing the queue, the interpreter will always print the last element twice.
