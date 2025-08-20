@@ -1,0 +1,2 @@
+If there is no memo, then sum will be set each time the next element in the stream is computed.
+This would yield different results for the same element positions in the stream.
